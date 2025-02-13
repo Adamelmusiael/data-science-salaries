@@ -1,51 +1,94 @@
-# ✋Introduction
-In this project I will dive into the Data Science Job Salaries insights and find valuable and interesting informations. The Data Science Job Salaries (LINK) is a dataset that I found on kaggle. It contains information about salaries and informations correlated to them, like expirience level, company location, its size etc. 
+# 📊 Data Science Job Salaries Analysis
 
-# 🔎Objectives
-1. Salary Insights
-  * What is the **average salary** for data profesionals world wide?
-  * How do **salaries vary by expirience** level?
-  * Which **employment type** earns the most?
-2. Geographical Trends
-  * What are the top paying countries?
-  * Is there a **salary difference** between an employee's **residence vs. company location**?
-3. Remote Work & Salary
-  * Do remote jobs pay more or less than onsite roles?
-  * Did number of remote job offers increased over the past years?
-4. Job Titles & Industry Insights
-  * What job roles earn the most?
-  * What is the range of salaries for different job titles?
+## ✋ Introduction
+In this project, I analyze the **Data Science Job Salaries** dataset, which I found on Kaggle (LINK). The dataset contains information about salaries and related factors such as **experience level, company location, company size**, and more.
 
-# 🔬Technologies
-For searching and diving into the dataset I will mostly use **SQL** (PostgresSQL). Advanced operations on dataset will be done in **python**. For visualization I will use **Power BI**. Other tools appearing in project: FEEEL IN THIS IF NEC!!!!!!!!!!!!!!!!!!!!!!!
+For searching, exploring, and performing basic transformations, I used **SQL (PostgreSQL)**.
 
-# 💡Findings and Insights
-1. Salary Insights
-  * What is the **average salary** for data profesionals world wide? <br>
-     The average salary for data provesionals is about **112298 $** (US dollars).
-  * How do **salaries vary by expirience** level? <br>
-     Following values are the average in USD. Shortcuts explanation: EN Entry-level / Junior MI Mid-level / Intermediate SE Senior-level / Expert EX Executive-level / Director
-     | Subject | Value               |
-     |---------|---------------------|
-     | EN      | 61643               |
-     | MI      | 87996               |
-     | SE      | 138617              |
-     | EX      | 199392              |
-  * Which **employment type** earns the most? <br>
-     The employment type that earns the most is CT- Contract Next with a huge difference (about 70K) is FT- Full time. [USD]
-2. Geographical Trends
-  * What are the top paying countries? <br>
-     The **top 5** most paying countreis (in average) are: Malaysia 200000$, Puerto Rico 160000$, United States 149194$. For clarity by top paying countries it is ment how much average employee is being paid depending of his location.
-  * Is there a **salary difference** between an employee's **residence vs. company location**? <br>
-      Yes, there is a salary difference and it is to about 40K. I was curious where this difference come from so I dived deeper into this. The reason is most probably the fact that best paying jobs are onsite jobs ex. Principal Data Engineer, Drincipal Data Scientist. This jobs might inflate the average.
-3. Remote/Local Work 
-  * What are the top 5 jobs that most often require working locally? <br>
-    Top 5 jobs that requiere working locally: ETL Developer, Head of Machine Learning, Big Data Architect, 3D Computer Vision Researcher, Lead Machine Learning Engineer. My first aproach was to calucalte number of local job offers for each job title, but this would favor most numerous jobs. Thus I calculated procent of job offers, for each job title that require working locally.
-  * Did number of remote jobs increased over this 3 years? <br>
-    Yes, definitely it did.The number of remote job offers **increased** almost **7 times** from 2020 to 2022 (36->228).
-4. Job Titles & Industry Insights
-  * What is the biggest range of salaries for different job titles? <br>
-    The biggest range of salaries is for Principal Data Engineer: 415000$.
-  * Which job had the biggest number of begginers? <br>
-    The greatest number of beginners (in this dataset entry level, juniors/mids) occurred in the following fields: Data Scientist, Data Engineer, Data Analyst.
+---
+## 🔎 Objectives
+
+### 1. Salary Insights
+- What is the **average salary** for data professionals worldwide?
+- How do **salaries vary by experience level**?
+- Which **employment type** earns the most?
+
+### 2. Geographical Trends
+- What are the **top-paying countries**?
+- Is there a **salary difference between an employee's residence and company location**?
+
+### 3. Remote Work & Salary
+- Do **remote jobs pay more or less** than onsite roles?
+- Has the **number of remote job offers increased** over the past years?
+
+### 4. Job Titles & Industry Insights
+- What **job roles earn the most**?
+- What is the **range of salaries for different job titles**?
+
+---
+## 💡 Findings and Insights
+
+### 1. Salary Insights
+- **What is the average salary for data professionals worldwide?**
+  - The average salary for data professionals is **$112,298 USD**.
+
+- **How do salaries vary by experience level?**
+  - The following are the average salaries in USD:
     
+    | Experience Level | Average Salary (USD) |
+    |-----------------|---------------------|
+    | Entry-level (EN) | 61,643 |
+    | Mid-level (MI)  | 87,996 |
+    | Senior-level (SE) | 138,617 |
+    | Executive-level (EX) | 199,392 |
+
+- **Which employment type earns the most?**
+  - The highest-paying employment type is **Contract (CT)**, with a significant gap (~$70K) compared to **Full-time (FT)**.
+
+---
+### 2. Geographical Trends
+- **What are the top-paying countries?**
+  - The **top 5 highest-paying countries** (average salaries in USD):
+    1. Malaysia - **$200,000**
+    2. Puerto Rico - **$160,000**
+    3. United States - **$149,194**
+  - Note: The ranking is based on **average salaries by employee location**.
+
+- **Is there a salary difference between an employee's residence and company location?**
+  - Yes, the average salary difference is approximately **$40K**.
+  - This is likely due to **onsite jobs**, such as Principal Data Engineer and Principal Data Scientist, which tend to offer **higher salaries**, thus inflating the average.
+
+---
+### 3. Remote Work & Salary
+- **What are the top 5 jobs that most often require working locally?**
+  - The **top 5 jobs** that require working **onsite**:
+    1. **ETL Developer**
+    2. **Head of Machine Learning**
+    3. **Big Data Architect**
+    4. **3D Computer Vision Researcher**
+    5. **Lead Machine Learning Engineer**
+  - Initially, I calculated the **total number of local job offers** per job title, but this approach favored **more common roles**. Instead, I calculated the **percentage of local job offers per job title**.
+
+- **Has the number of remote jobs increased over the past three years?**
+  - Yes, **remote job offers have increased nearly 7× from 2020 to 2022** (**36 → 228**).
+
+---
+### 4. Job Titles & Industry Insights
+- **Which job has the largest salary range?**
+  - **Principal Data Engineer** has the **largest salary range**, spanning **$415,000 USD**.
+
+- **Which job had the highest number of beginners?**
+  - The roles with the most **entry-level and mid-level professionals**:
+    - **Data Scientist**
+    - **Data Engineer**
+    - **Data Analyst**
+
+---
+## 📌 Summary
+This project explored **data science job salaries** using SQL for data exploration and transformation. The key takeaways include:
+- **Salaries increase with experience**, with executives earning **~$200K USD**.
+- **Contract jobs pay the highest**, but full-time positions dominate the dataset.
+- **Malaysia, Puerto Rico, and the U.S. are the highest-paying countries**.
+- **Remote jobs have significantly increased** since 2020.
+- **Some onsite roles (e.g., Principal Data Engineer) drive salary differences**.
+- **Beginner roles are most common in Data Science, Data Engineering, and Data Analysis**.
